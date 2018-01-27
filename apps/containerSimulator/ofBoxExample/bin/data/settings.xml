@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<panel>
+	<farbe1>0, 0, 0, 255</farbe1>
+	<farbe2>255, 0, 0, 255</farbe2>
+	<geschwindigkeit>0.2595</geschwindigkeit>
+	<scale>1</scale>
+	<mode>0</mode>
+</panel>
