@@ -47,7 +47,7 @@ public:
     float wContainer{ 500.0f };
     float dContainer{ 250.0f };
     float hContainer{ 300.0f };
-    float hBorte{ 40.0f };
+    float hBorte{ 25.0f };
     
     ofxPanel gui;
     ofParameter<ofColor> color1;

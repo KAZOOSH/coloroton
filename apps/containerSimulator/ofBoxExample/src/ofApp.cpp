@@ -35,7 +35,7 @@ void ofApp::setup(){
     //container
     container.set(wContainer - 0.1, hContainer, dContainer - 0.1);
     //container.setOrientation(ofQuaternion(90, ofVec3f(1, 0, 0)));
-    container.setPosition(0,  -hContainer/2, -dContainer/2);
+    container.setPosition(0,  -hContainer/2 - 30, -dContainer/2);
     container.mapTexCoordsFromTexture(containerTex.getTexture());
     
     //borte
