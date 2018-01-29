@@ -9,6 +9,10 @@ openFrameworksUniversal.a
 libs/openFrameworksCompiled/lib/*/*
 
 
+
+
+
+
 # apothecary
 scripts/apothecary
 
@@ -102,6 +106,14 @@ xcuserdata
 *.ilk
 *.aps
 ipch/
+*.obj
+*.exe
+*.exp
+*.db
+*.user
+*.rc
+apps\coloroton\colorotonControl\bin\*
+!apps\coloroton\colorotonControl\bin\data\*
 
 # Eclipse
 .metadata
@@ -158,3 +170,12 @@ Desktop.ini
 
 .mailmap
 
+apps/coloroton/colorotonControl/bin/FreeImage.dll
+apps/coloroton/colorotonControl/colorotonControl.vcxproj.filters
+apps/coloroton/colorotonControl/colorotonControl.vcxproj
+apps/coloroton/colorotonControl/colorotonControl.sln
+apps/coloroton/colorotonControl/bin/colorotonControl_debug.lib
+apps/coloroton/colorotonControl/bin/fmodex.dll
+apps/coloroton/colorotonControl/bin/fmodexL.dll
+apps/containerSimulator/ofBoxExample/ofBoxExample.VC.db
+apps/containerSimulator/ofBoxExample/ofBoxExample.VC.db

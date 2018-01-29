@@ -2,7 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+	ledWriter.setup(&settings);
+	ledWriter.loadMapping("mappingNeumarkt.txt");
 }
 
 //--------------------------------------------------------------
