@@ -8,7 +8,7 @@
 #include "ofxOsc.h"
 
 #if defined(TARGET_RASPBERRY_PI)
-#include "ofxGPIO.h""
+#include "ofxGPIO.h"
 #endif
 
 class ofApp : public ofBaseApp{
