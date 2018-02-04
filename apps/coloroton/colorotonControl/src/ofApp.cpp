@@ -28,8 +28,10 @@ void ofApp::setup(){
     //init modules
     ledWriter.setup(&settings);
     visCreator.setup(&settings);
-    simulator.setup(&settings);
     
+#if !defined(TARGET_RASPBERRY_PI)
+    simulator.setup(&settings);
+#endif
     ofAddListener(settings.newSettingsLoaded, &visCreator, &VisCreator::onUpdateSettings);
     
 }
@@ -42,12 +44,15 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+#if !defined(TARGET_RASPBERRY_PI)
     simulator.draw();
     
     ofPushMatrix();
     ofTranslate (0, 50);
     ledWriter.draw();
     ofPopMatrix();
+#endif
 }
 
 void ofApp::checkGpio(){

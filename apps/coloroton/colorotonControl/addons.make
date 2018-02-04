@@ -2,3 +2,4 @@ ofxEasing
 ofxGui
 ofxOsc
 ofxTeensyOcto
+ofxGPIO
