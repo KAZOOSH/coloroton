@@ -93,6 +93,7 @@ tests/**/gcc-release/
 # XCode 4
 xcuserdata
 *.xcworkspace
+*.xcscheme
 
 # Code::Blocks
 *.depend

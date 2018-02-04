@@ -1,0 +1,33 @@
+ {
+ 	"gpio":{
+ 		"pin": ["12","13"]
+ 	},
+ 	"osc":{
+ 		"host":"localhost",
+ 		"port":12345
+ 	},
+ 	"ledWriter": {
+ 		"mappingFile":"mappingNeumarkt.txt",
+        "serial":"/dev/cu.usbmodem3289441"
+    },
+    "texture": {
+    	"fadeInTime" : 3000,
+    	"fadeOutTime" : 600,
+    	"minIntensity" : 0.2,
+    	"maxIntensity" : 1.0
+    },
+    "tNoise": {
+        "color1":"255,0,0",
+        "color2":"0,0,255",
+        "scale":3.0,
+        "speed":3.5
+    },
+    "tWave": {
+        "color":["255,255,255","255,255,255"],
+        "position":[10,100],
+        "wBlob": 4.0,
+        "creationOffset" : 200,
+        "blobLifetime" : 5000,
+        "blobSpeed":0.5
+    }
+}

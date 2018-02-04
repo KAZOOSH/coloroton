@@ -1,2 +1,4 @@
 ofxEasing
 ofxGui
+ofxOsc
+ofxTeensyOcto
