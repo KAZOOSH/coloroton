@@ -183,3 +183,7 @@ apps/coloroton/colorotonControl/bin/fmodex.dll
 apps/coloroton/colorotonControl/bin/fmodexL.dll
 apps/containerSimulator/ofBoxExample/ofBoxExample.VC.db
 apps/containerSimulator/ofBoxExample/ofBoxExample.VC.db
+
+apps/coloroton/colorotonControl/colorotonControl.xcodeproj/project.pbxproj
+
+*.xcconfig
