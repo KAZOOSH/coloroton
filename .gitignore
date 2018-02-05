@@ -94,6 +94,9 @@ tests/**/gcc-release/
 xcuserdata
 *.xcworkspace
 *.xcscheme
+#*.xcconfig
+#apps/coloroton/colorotonControl/Project.xcconfig
+#apps/coloroton/colorotonControl/colorotonControl.xcodeproj/*
 
 # Code::Blocks
 *.depend

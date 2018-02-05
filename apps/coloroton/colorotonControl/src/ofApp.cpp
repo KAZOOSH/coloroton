@@ -3,6 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetFrameRate(90);
+    ofSetDataPathRoot("../Resources/");
     settings.loadSettings("settings.json");
     
     //create osc
@@ -38,7 +39,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    visCreator.createTexture(0);
+    visCreator.createTexture(1);
     ledWriter.updateLeds();
 }
 

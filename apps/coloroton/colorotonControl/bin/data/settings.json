@@ -12,15 +12,15 @@
     },
     "texture": {
     	"fadeInTime" : 3000,
-    	"fadeOutTime" : 600,
+    	"fadeOutTime" : 3000,
     	"minIntensity" : 0.2,
     	"maxIntensity" : 1.0
     },
     "tNoise": {
-        "color1":"255,0,0",
-        "color2":"0,0,255",
+        "color1":"0,0,255",
+        "color2":"250,0,0",
         "scale":3.0,
-        "speed":3.5
+        "speed":1.5
     },
     "tWave": {
         "color":["255,255,255","255,255,255"],
