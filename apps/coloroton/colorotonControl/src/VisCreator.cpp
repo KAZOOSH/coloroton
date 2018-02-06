@@ -39,6 +39,8 @@ void VisCreator::onUpdateSettings(bool& b){
     color2 = getColor(j["tNoise"]["color2"].get<string>());
     scale = j["tNoise"]["scale"].get<float>();
     speed = j["tNoise"]["speed"].get<float>();
+    weight = j["tNoise"]["weight"].get<float>();
+    isSigmoid = j["tNoise"]["isSigmoid"].get<bool>();
     
     //wave
     blobColor[0] = getColor(j["tWave"]["color"][0].get<string>());
@@ -141,7 +143,12 @@ void VisCreator::createNoise()
             //normalize to 0-1
             value = 0.5*(value + 1);
             
-            value = ofxeasing::map(value, 0, 1.0, 0.0, 1.0, ofxeasing::exp::easeInOut);
+            /*value = ofxeasing::map(value, 0, 1.0, 0.0, 1.0, ofxeasing::exp::easeInOut);*/
+            if (isSigmoid )value = doubleCircleSigmoid(value,weight);
+            else {
+                value = ofxeasing::map(value, 0 + std::min(weight,0.0f), 1.0 + std::max(0.0f,weight), 0.0, 1.0f, ofxeasing::cubic::easeInOut);
+            }
+            
             
             ofColor c1 = color1;
             ofColor c = c1.lerp(color2, value);
@@ -208,4 +215,18 @@ void VisCreator::createTestModules(){
     ofDrawRectangle((int)(ofGetElapsedTimeMillis()/40)%(int)renderFbo.getWidth(),0,1,2);
     
     ofSetColor(255);
+}
+
+float VisCreator::doubleCircleSigmoid (float x, float a){
+    float min_param_a = 0.0;
+    float max_param_a = 1.0;
+    a = max(min_param_a, min(max_param_a, a));
+    
+    float y = 0;
+    if (x<=a){
+        y = a - sqrt(a*a - x*x);
+    } else {
+        y = a + sqrt((1-a)*(1-a) - (x-1)*(x-1));
+    }
+    return y;
 }

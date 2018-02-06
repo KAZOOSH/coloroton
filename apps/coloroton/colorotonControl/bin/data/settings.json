@@ -17,17 +17,19 @@
     	"maxIntensity" : 1.0
     },
     "tNoise": {
-        "color1":"0,0,255",
-        "color2":"250,0,0",
-        "scale":3.0,
-        "speed":1.5
+        "color1":"255,0,0",
+        "color2":"0,0,0",
+        "weight":0.2,
+        "isSigmoid":true,
+        "scale":5.0,
+        "speed":0.5
     },
     "tWave": {
-        "color":["255,255,255","255,255,255"],
+        "color":["255,125,0","200,150,0"],
         "position":[10,100],
         "wBlob": 4.0,
         "creationOffset" : 200,
-        "blobLifetime" : 5000,
-        "blobSpeed":0.5
+        "blobLifetime" : 8000,
+        "blobSpeed":1.0
     }
 }

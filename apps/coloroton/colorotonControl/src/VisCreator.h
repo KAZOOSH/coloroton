@@ -43,6 +43,7 @@ public:
     
 protected:
     ofColor getColor(string c);
+    float doubleCircleSigmoid (float x, float a);
     
 private:
     ofFbo renderFbo;
@@ -66,6 +67,8 @@ private:
     ofColor color2;
     float scale;
     float speed;
+    float weight = 0.5;
+    bool isSigmoid = false;
     
     //special
     void createWave();
