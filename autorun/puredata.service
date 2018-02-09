@@ -10,7 +10,7 @@ Type=simple
 User=pi
 Group=pi
 WorkingDirectory=/home/pi/Container_final/
-ExecStart=pd-l2ork -nogui -alsa /home/pi/Container_final/13febContainer_final.pd
+ExecStart=/usr/bin/pd-l2ork -nogui -alsa /home/pi/Container_final/13febContainer_final.pd
 StandardOutput=syslog
 StandardError=syslog
 

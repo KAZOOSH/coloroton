@@ -1,7 +1,7 @@
 [Unit]
 Description=Coloroton Service
 #Requires=
-After=network.target
+After=puredata.service network.target
 
 [Service]
 Type=simple

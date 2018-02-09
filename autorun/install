@@ -9,7 +9,6 @@ MKDIR="sudo mkdir"
 CHOWN="sudo chown"
 CHMOD="sudo chmod"
 
-
 SDIR="."
 DDIR="/lib/systemd/system"
 

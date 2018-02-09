@@ -1,0 +1,38 @@
+
+
+INSTALL
+-------------
+
+cd to this dir.
+
+run ./install install
+or
+run ./install uninstall
+
+
+starting stoping
+-----------------
+
+#to start ...
+sudo systemctl start puredata.service
+sudo systemctl start coloroton.service
+
+
+#to stop ...
+sudo systemctl stop puredata.service
+sudo systemctl stop coloroton.service
+
+
+#see status ...
+sudo systemctl status puredata.service
+sudo systemctl status coloroton.service
+
+
+
+
+debuging
+-------------------------
+
+#view logs. see what you see ...
+sudo journalctl -u puredata.service
+sudo jounralctl -u coloroton.service
