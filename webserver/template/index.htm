@@ -5,25 +5,49 @@
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <style type="text/css">
 * {margin:0;padding:0;}
-	body {
-		height: 100%;
-	}
+body {
+	height: 100%;
+}
+
+main {
+	width: 30%;
+	margin: 0 auto;
+}
+
+section {
+	margin-top: 20px;
+	border: 1px solid black;
+	padding: 20px;
+}
+
 </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-	$( function() {
-		$("#volumen").slider();
-		
+<link rel="stylesheet" href="/res/ui/jquery-ui.css">
+<script src="/res/ui/external/jquery/jquery.js"></script>
+<script src="/res/ui/jquery-ui.js"></script>
+<script>
+$( function() {
+	$("#volumen").slider({
+		min: 0,
+		max: 90,
+		value: 90,
+		slide: function(e,ui) {
+			level = ui.value;
+			$.ajax({url: '/audiolevel/' + level});
+		}
 	});
-	</script>
+	
+});
+</script>
 </head>
 	<body>
 		<h1>Coloroton</h1>
 		<hr/>
-		<section>
-			<p>Lautstärke</p>
-			<div id="volumen"></div>
-		</section>
+
+		<main>
+			<section>
+				<p>Lautstärke</p>
+				<div id="volumen"></div>
+			</section>
+		<main>
 	</body>
 </html>

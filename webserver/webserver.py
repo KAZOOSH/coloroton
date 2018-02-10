@@ -12,14 +12,26 @@ app = Flask(__name__,template_folder=template_dir,static_url_path='/res',static_
 
 @app.route('/')
 def index():
-    return render_template('index.htm')
+	return send_file('template/index.htm');
+	#return render_template('index.htm')
 
-@app.route('/audio/<int:id>')
+@app.route('/audiolevel/<int:id>')
 def sound(id):
 	m = alsaaudio.Mixer()
 	m.setvolume(id)
     	return 'OK' 
 
+@app.after_request
+def add_header(r):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
 
 
 
