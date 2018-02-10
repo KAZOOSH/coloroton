@@ -1,8 +1,9 @@
-#!/opt/k11bot/env/bin/python -u
+#!/usr/bin/python -u
 #coding: utf8
 
 import os
-import alsaaudio
+#import alsaaudio
+from subprocess import call
 from flask import Flask, render_template, send_file
 
 mypath = os.path.dirname(os.path.realpath(__file__))
@@ -17,9 +18,14 @@ def index():
 
 @app.route('/audiolevel/<int:id>')
 def sound(id):
-	m = alsaaudio.Mixer()
-	m.setvolume(id)
+	#m = alsaaudio.Mixer(alsaaudio.mixers[2])
+	#m.setvolume(id)
+	#amixer -c 1 cset numid=4 40,40
+	sid = str(id)
+	call(["amixer", "-c", "1", "cset", "numid=4", sid+","+sid])
     	return 'OK' 
+
+
 
 @app.after_request
 def add_header(r):
@@ -36,7 +42,7 @@ def add_header(r):
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0', port=80)
 
 
 

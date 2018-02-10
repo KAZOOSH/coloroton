@@ -29,12 +29,14 @@ function install {
 	echo "installing coloroton"
 	installUnit "coloroton.service"
 	installUnit "puredata.service"
+	installUnit "webserver.service"
 }
 
 function uninstall {
 	echo "uninstalling coloroton"
 	uninstallUnit "coloroton.service"
 	uninstallUnit "puredata.service"
+	uninstallUnit "webserver.service"
 }
 
 
